@@ -2314,15 +2314,33 @@ footer h1 {
   font-weight: 700;
 }
 
-.mascot-hero-grid > img {
+.mascot-hero-portrait {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  justify-self: center;
+  filter: drop-shadow(0 30px 34px rgba(20, 0, 25, 0.42));
+  transform: rotate(1.5deg);
+}
+
+.mascot-hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 54px rgba(236, 194, 243, 0.25);
+}
+
+.mascot-hero-portrait img {
+  position: relative;
   display: block;
   width: 100%;
-  max-height: 95%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 34px;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 28px 70px rgba(20, 0, 25, 0.4);
-  transform: rotate(1.5deg);
+  object-position: center 49%;
+  clip-path: circle(49% at 50% 50%);
 }
 
 .mascot-main {
@@ -2361,6 +2379,29 @@ footer h1 {
 
 .mascot-full-image {
   max-width: 510px;
+}
+
+.mascot-full-image.is-transparent {
+  overflow: visible;
+  padding: 6px 18px 58px;
+  border: 0;
+  border-radius: 0;
+  background: radial-gradient(ellipse at 50% 78%, rgba(110, 23, 117, 0.16), transparent 66%);
+  box-shadow: none;
+}
+
+.mascot-full-image.is-transparent img {
+  max-height: 660px;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 22px rgba(48, 20, 54, 0.22));
+}
+
+.mascot-full-image.is-transparent > span {
+  right: auto;
+  bottom: 0;
+  left: 50%;
+  width: min(290px, calc(100% - 36px));
+  transform: translateX(-50%);
 }
 
 .mascot-facts-card {
@@ -2421,9 +2462,8 @@ footer h1 {
     padding-top: 78px;
   }
 
-  .mascot-hero-grid > img {
+  .mascot-hero-portrait {
     width: min(100%, 460px);
-    max-height: 560px;
     margin: 0 auto;
   }
 }
