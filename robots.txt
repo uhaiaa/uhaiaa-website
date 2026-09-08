@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uhaiaa.github.io/uhaiaa-website/sitemap.xml
