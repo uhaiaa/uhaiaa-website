@@ -2392,13 +2392,21 @@ footer h1 {
   align-items: center;
 }
 
+.mascot-image-column {
+  display: flex;
+  width: 100%;
+  max-width: 510px;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mascot-full-image {
   max-width: 510px;
 }
 
 .mascot-full-image.is-transparent {
   overflow: visible;
-  padding: 6px 18px 58px;
+  padding: 6px 18px 12px;
   border: 0;
   border-radius: 0;
   background: radial-gradient(ellipse at 50% 78%, rgba(110, 23, 117, 0.16), transparent 66%);
@@ -2409,14 +2417,6 @@ footer h1 {
   max-height: 660px;
   object-fit: contain;
   filter: drop-shadow(0 24px 22px rgba(48, 20, 54, 0.22));
-}
-
-.mascot-full-image.is-transparent > span {
-  right: auto;
-  bottom: 0;
-  left: 50%;
-  width: min(290px, calc(100% - 36px));
-  transform: translateX(-50%);
 }
 
 .mascot-facts-card {
@@ -2454,34 +2454,13 @@ footer h1 {
   line-height: 1.55;
 }
 
-.mascot-pet-download {
-  margin-top: 30px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(68, 0, 85, 0.14);
-}
-
-.mascot-pet-download-label {
-  margin: 0 0 8px;
-  color: #440055;
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.mascot-pet-download > p:not(.mascot-pet-download-label) {
-  max-width: 600px;
-  margin: 0;
-  color: #514953;
-  line-height: 1.6;
-}
-
-.mascot-pet-download-actions {
+.mascot-image-actions {
   display: flex;
+  width: min(100%, 360px);
   align-items: center;
-  flex-wrap: wrap;
-  gap: 14px 20px;
-  margin-top: 18px;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
 }
 
 .mascot-download-button {
@@ -2489,6 +2468,7 @@ footer h1 {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
   padding: 14px 20px;
   border-radius: 999px;
   background: #007f79;
@@ -2537,7 +2517,8 @@ footer h1 {
   }
 
   .mascot-preview-image,
-  .mascot-full-image {
+  .mascot-full-image,
+  .mascot-image-column {
     width: min(100%, 520px);
     margin: 0 auto;
   }
@@ -2568,16 +2549,12 @@ footer h1 {
     gap: 5px;
   }
 
-  .mascot-full-image > span,
   .mascot-preview-image > span {
     right: 12px;
     bottom: 12px;
     left: 12px;
   }
 
-  .mascot-download-button {
-    width: 100%;
-  }
 }
 
 /* Floating Sato-kun helper */
