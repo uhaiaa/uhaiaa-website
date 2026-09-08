@@ -1390,9 +1390,23 @@ h2 {
 }
 
 /* Instagram Preview */
-#instagram-preview {
+#instagram-preview,
+#sato-instagram {
   padding: 56px 30px 72px;
   background: linear-gradient(180deg, aliceblue 0%, #f5edf8 100%);
+}
+
+#sato-instagram {
+  padding-top: clamp(72px, 8vw, 104px);
+  padding-bottom: clamp(80px, 9vw, 118px);
+  background:
+    radial-gradient(circle at 84% 12%, rgba(110, 23, 117, 0.12), transparent 32%),
+    linear-gradient(180deg, #fff 0%, #f5edf8 100%);
+}
+
+#sato-instagram .instagram-section-header,
+#sato-instagram .instagram-frame-shell {
+  max-width: 860px;
 }
 
 .instagram-section-header {
@@ -1483,7 +1497,8 @@ h2 {
 }
 
 @media (max-width: 680px) {
-  #instagram-preview {
+  #instagram-preview,
+  #sato-instagram {
     padding-right: 16px;
     padding-left: 16px;
   }
