@@ -519,7 +519,7 @@ h2 {
 
 .trifecta-card {
   display: flex;
-  min-height: 390px;
+  min-height: 550px;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 18px;
@@ -540,8 +540,28 @@ h2 {
   font-weight: 800;
 }
 
+.trifecta-logo {
+  display: flex;
+  height: 150px;
+  margin-top: 14px;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.trifecta-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .card-kicker {
-  margin-top: 32px;
+  margin-top: 26px;
   color: #dda6e9;
 }
 
@@ -680,7 +700,7 @@ h2 {
   }
 
   .trifecta-card {
-    min-height: 310px;
+    min-height: 490px;
   }
 
   .about-cta-inner {
