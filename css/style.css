@@ -37,6 +37,20 @@ header {
   height: 75vh;
 }
 
+/* Keep the opening carousel and its navbar within one full viewport. */
+.keno-home {
+  --home-nav-height: 64px;
+}
+
+.keno-home .header-carousel {
+  height: calc(100vh - var(--home-nav-height));
+  height: calc(100svh - var(--home-nav-height));
+}
+
+.keno-home #navbar {
+  --logo-lift: 55px;
+}
+
 .carousel-slide {
   position: absolute;
   width: 100%;
@@ -88,6 +102,7 @@ header {
 
 #navbar {
   --logo-size: 156px;
+  --logo-lift: 0px;
   background-color: #440055;
   width: 100%;
   position: sticky;
@@ -140,7 +155,8 @@ header {
   left: 50%;
   z-index: 2;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - var(--logo-lift)));
+  will-change: transform;
 }
 
 .keno-navbar-content .center-logo .navbar-logo {
@@ -197,6 +213,14 @@ header {
 }
 
 @media (max-width: 760px) {
+  .keno-home {
+    --home-nav-height: 58px;
+  }
+
+  .keno-home #navbar {
+    --logo-lift: 30px;
+  }
+
   .carousel-caption-dynamic {
     bottom: 78px;
   }
@@ -230,6 +254,10 @@ header {
 }
 
 @media (max-width: 520px) {
+  .keno-home {
+    --home-nav-height: 88px;
+  }
+
   .keno-navbar-content {
     grid-template-columns: minmax(0, 1fr) 108px minmax(0, 1fr);
     min-height: 88px;
