@@ -26,7 +26,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css?v=22" />
+        <link rel="stylesheet" href="css/style.css?v=24" />
         <!--Icon Coverage-->
         <link rel="icon" type="image/x-icon" href="image/favicon.ico"/>
         <link rel="icon" type="image/png" sizes="100x100" href="image/favicon-32x32.png" />
@@ -282,8 +282,10 @@
           const expandedSize = window.innerWidth < 760 ? 100 : 156;
           const compactSize = window.innerWidth < 760 ? 40 : 46;
           const logoSize = expandedSize - ((expandedSize - compactSize) * progress);
+          const logoLift = (logoSize - compactSize) / 2;
 
           navbar.style.setProperty('--logo-size', `${logoSize}px`);
+          navbar.style.setProperty('--logo-lift', `${logoLift}px`);
           navbar.classList.toggle('is-stuck', window.scrollY >= stickyPoint - 1);
           logoAnimationFrame = null;
         }
